@@ -11,6 +11,7 @@ Demonstrate the ability to build an end-to-end ML pipeline for a cybersecurity u
 - **Python 3.10+**
 - **scikit-learn** — TF-IDF vectorization, Random Forest classifier, cross-validation
 - **pandas / NumPy** — Data manipulation and numerical operations
+- **matplotlib / seaborn** — Professional data visualization
 - **Re (regex)** — Pattern matching for suspicious URLs, PII requests, typosquatting
 
 ## Architecture
@@ -45,10 +46,13 @@ Email Text
 
 ```bash
 # Install dependencies
-pip install scikit-learn pandas numpy
+pip install -r requirements.txt
 
 # Run the full pipeline
 python phishing_classifier.py
+
+# Generate visualizations (run after the classifier)
+python visualize_results.py
 ```
 
 This will:
@@ -59,26 +63,19 @@ This will:
 5. Print evaluation metrics and top features
 6. Demonstrate classification on 5 new unseen emails
 7. Save results to `results/evaluation_results.json`
+8. Generate professional visualizations in `screenshots/`
 
 ## Results
 
 | Metric    | Score |
 |-----------|-------|
-| Accuracy  | 100%  |
-| Precision | 100%  |
-| Recall    | 100%  |
-| F1 Score  | 100%  |
+| Accuracy  | See output |
+| Precision | See output |
+| Recall    | See output |
+| F1 Score  | See output |
 
-**Cross-Validation (5-fold):**
-- Mean F1: **99.68%**
-- Std Dev: ±0.63%
+Results are generated fresh each run and saved to `results/evaluation_results.json`.
 
-**Confusion Matrix (Test Set):**
-```
-                  Predicted Legit  Predicted Phish
-Actual Legit                   40                0
-Actual Phish                    0               40
-```
 ## Visualizations
 
 ### Performance Metrics
@@ -96,21 +93,14 @@ Actual Phish                    0               40
 ### Dataset Composition
 ![Dataset Distribution](screenshots/dataset_distribution.png)
 
-[View full evaluation metrics](results/evaluation_results.json)
-
 ## Key Features Detected
 
 The classifier learns to identify phishing signals including:
-
-| Feature | Importance | Description |
-|---------|------------|-------------|
-| `http` (TF-IDF) | 17.35% | Presence of URLs in email body |
-| Suspicious patterns | 8.36% | IP-based URLs, typosquatted domains, PII requests |
-| Text length | 6.58% | Phishing emails tend to be shorter/more urgent |
-| Urgency score | 6.35% | Keywords like "immediately", "act now", "expires" |
-| URL count | 6.35% | Multiple links often indicate phishing |
-
-Top detection signals: URL presence, urgency language, suspicious domain patterns, and ALL CAPS formatting.
+- **Urgency language** ("act now", "immediately", "expires")
+- **Suspicious URLs** (IP-based links, typosquatted domains, sketchy TLDs)
+- **ALL CAPS text** (common phishing tactic)
+- **PII solicitation** (requests for SSN, bank details, passwords)
+- **Monetary references** (fake charges, prize amounts)
 
 ## Limitations
 
@@ -128,4 +118,4 @@ Top detection signals: URL presence, urgency language, suspicious domain pattern
 
 ## Author
 
-Michael Kurdi — [LinkedIn](https://www.linkedin.com/in/michael-kurdi) | CompTIA Security+ | B.S. Information Technology (Cybersecurity), SNHU
+Michael Kurdi — [LinkedIn](https://www.linkedin.com/in/michael-kurdi) | [GitHub](https://github.com/KM-it-ops) | CompTIA Security+ | B.S. Information Technology (Cybersecurity), SNHU
