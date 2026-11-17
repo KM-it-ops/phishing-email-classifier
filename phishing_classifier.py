@@ -4,7 +4,7 @@ Phishing Email Classifier
 A machine learning pipeline that classifies emails as phishing or legitimate
 using text-based feature extraction and a Random Forest classifier.
 
-Author: Michael Kurdi
+Author: Mahmoud Al Kurdi
 Project: Portfolio — Cybersecurity + AI
 Tools: Python, scikit-learn, pandas, NumPy
 """
