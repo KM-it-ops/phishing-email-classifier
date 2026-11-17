@@ -4,7 +4,7 @@ Phishing Email Classifier — Visualization Suite
 Generates professional charts for the phishing classifier project.
 Run this AFTER running phishing_classifier.py (which creates results/evaluation_results.json).
 
-Author: Michael Kurdi
+Author: Mahmoud Al Kurdi
 Tools: matplotlib, seaborn, json
 """
 
