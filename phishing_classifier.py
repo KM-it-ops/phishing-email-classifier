@@ -352,7 +352,7 @@ def main():
     # Demo with new emails
     test_emails = [
         "URGENT: Your bank account has been suspended! Click http://192.168.1.50/verify to restore access immediately!",
-        "Hi Michael, the team lunch is scheduled for Friday at noon. Conference room B. See you there!",
+        "Hi Jordan, the team lunch is scheduled for Friday at noon. Conference room B. See you there!",
         "You have been selected to receive a FREE $500 Walmart gift card! Claim now: http://fr33-gift.xyz/claim",
         "Please review the attached quarterly report and send your comments by Thursday.",
         "WARNING: Your Netflix account will be cancelled in 24 hours unless you update payment info at http://netf1ix-billing.com/update",
