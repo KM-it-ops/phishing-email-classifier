@@ -11,7 +11,7 @@ Demonstrate the ability to build an end-to-end ML pipeline for a cybersecurity u
 - **Python 3.10+**
 - **scikit-learn** — TF-IDF vectorization, Random Forest classifier, cross-validation
 - **pandas / NumPy** — Data manipulation and numerical operations
-- **matplotlib / seaborn** — Professional data visualization
+- **matplotlib / seaborn** — Charts
 - **Re (regex)** — Pattern matching for suspicious URLs, PII requests, typosquatting
 
 ## Architecture
@@ -67,31 +67,34 @@ This will:
 
 ## Results
 
+On the committed synthetic dataset (400 emails, 200 phishing / 200 legitimate; `results/evaluation_results.json`), scored on the 80-email held-out test set:
+
 | Metric    | Score |
 |-----------|-------|
-| Accuracy  | See output |
-| Precision | See output |
-| Recall    | See output |
-| F1 Score  | See output |
+| Accuracy  | 1.00 |
+| Precision | 1.00 |
+| Recall    | 1.00 |
+| F1 Score  | 1.00 |
+| 5-fold CV F1 | 0.9968 ± 0.0063 |
 
-Results are generated fresh each run and saved to `results/evaluation_results.json`.
+A perfect test score on synthetic, template-generated email means the task is too easy, not that the model is production-ready. The next step is a real corpus (see Limitations). Rerunning the pipeline regenerates these files.
 
 ## Visualizations
 
 ### Performance Metrics
-![Performance Metrics](screenshots/performance_metrics.png)
+![Performance Metrics](Screenshots/performance_metrics.png)
 
 ### Confusion Matrix
-![Confusion Matrix](screenshots/confusion_matrix.png)
+![Confusion Matrix](Screenshots/confusion_matrix.png)
 
 ### Top Detection Features
-![Feature Importance](screenshots/feature_importance.png)
+![Feature Importance](Screenshots/feature_importance.png)
 
 ### Cross-Validation Stability
-![Cross-Validation Results](screenshots/cross_validation.png)
+![Cross-Validation Results](Screenshots/cross_validation.png)
 
 ### Dataset Composition
-![Dataset Distribution](screenshots/dataset_distribution.png)
+![Dataset Distribution](Screenshots/dataset_distribution.png)
 
 ## Key Features Detected
 
@@ -118,4 +121,4 @@ The classifier learns to identify phishing signals including:
 
 ## Author
 
-Mahmoud Al Kurdi — [LinkedIn](https://www.linkedin.com/in/mahmoud-al-kurdi-it/) | [GitHub](https://github.com/KM-it-ops) | CompTIA Security+ | B.S. Information Technology (Cybersecurity), SNHU
+Mahmoud Al Kurdi — [LinkedIn](https://www.linkedin.com/in/mahmoud-al-kurdi-it/) | [GitHub](https://github.com/KM-it-ops) | CompTIA Security+ | B.S. in Information Technologies, Cybersecurity concentration, SNHU | [Portfolio](https://km-it-ops.github.io/)
