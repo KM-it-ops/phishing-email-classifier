@@ -121,4 +121,4 @@ The classifier learns to identify phishing signals including:
 
 ## Author
 
-Mahmoud Al Kurdi — [LinkedIn](https://www.linkedin.com/in/mahmoud-al-kurdi-it/) | [GitHub](https://github.com/KM-it-ops) | CompTIA Security+ | B.S. Information Technologies (Cybersecurity), SNHU | [Portfolio](https://km-it-ops.github.io/)
+Mahmoud Al Kurdi — [LinkedIn](https://www.linkedin.com/in/mahmoud-al-kurdi-it/) | [GitHub](https://github.com/KM-it-ops) | CompTIA Security+ | B.S. in Information Technologies, Cybersecurity concentration, SNHU | [Portfolio](https://km-it-ops.github.io/)
